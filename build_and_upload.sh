@@ -9,8 +9,7 @@
 #max/linux
 #aws ecr get-login-password --region <REGION> | sudo docker login --username AWS --password-stdin <AWS USER ECR URL>
 
-
-docker build -t <LAMBDA NAME> .
-docker tag <LAMBDA NAME> <AWS USER ECR URL>/<LAMBDA NAME>:prod
-docker push <AWS USER ECR URL>/<LAMBDA NAME>:prod
-aws lambda update-function-code --function-name  <LAMBDA NAME> --image-uri <AWS USER ECR URL>/<LAMBDA NAME>:prod
+# docker build -t <LAMBDA NAME> .
+# docker tag <LAMBDA NAME> <AWS USER ECR URL>/<LAMBDA NAME>:prod
+# docker push <AWS USER ECR URL>/<LAMBDA NAME>:prod
+# aws lambda update-function-code --function-name  <LAMBDA NAME> --image-uri <AWS USER ECR URL>/<LAMBDA NAME>:prod
